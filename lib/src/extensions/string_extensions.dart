@@ -1,27 +1,31 @@
+/// Contains extensions for the [String] class.
 extension StringExtensions on String {
-  String snakeToPascalCase() => split("_")
+  /// Converts a string from snake_case to PascalCase.
+  String snakeToPascalCase() => split('_')
       .map((String element) => element[0].toUpperCase() + element.substring(1))
-      .join("")
-      .replaceAll("_", "");
+      .join()
+      .replaceAll('_', '');
 
+  /// Converts a string from snake_case to camelCase.
   String snakeToCamelCase() =>
       snakeToPascalCase()[0].toLowerCase() + snakeToPascalCase().substring(1);
 
-  String pascalToSnakeCase() => split(RegExp(r"(?=[A-Z])"))
+  /// Converts a string from PascalCase to snake_case.
+  String pascalToSnakeCase() => split(RegExp(r'(?=[A-Z])'))
       .map((String element) => element.toLowerCase())
-      .join("_");
+      .join('_');
 
-  /// only 80 chars per line
+  /// Only 80 chars per line
   String formatDocumentation() => length > 80
       ? _splitByLength(80)
           .map(
-            (String line) => " /// $line",
+            (String line) => ' /// $line',
           )
-          .join("\n")
-      : "/// $this";
+          .join('\n')
+      : '/// $this';
 
   List<String> _splitByLength(int numberOfChars) {
-    List<String> result = [];
+    final List<String> result = <String>[];
     for (int i = 0; i < length; i += numberOfChars) {
       result.add(substring(i, i + length));
     }

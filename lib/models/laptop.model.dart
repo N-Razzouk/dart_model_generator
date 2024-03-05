@@ -113,4 +113,14 @@ class LaptopStorageModel {
       );
 }
 
-enum LaptopOperatingSystemEnum { windows, macOS, linux }
+/// The operating system of the laptop.
+enum LaptopOperatingSystemEnum {
+  /// windows
+  windows,
+
+  /// macOS
+  macOS,
+
+  /// linux
+  linux,
+}

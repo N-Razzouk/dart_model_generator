@@ -48,19 +48,6 @@
             "default": null
         },
         {
-            "name": "quarter",
-            "type": "enum",
-            "items": [
-                "first",
-                "second",
-                "third",
-                "fourth"
-            ],
-            "required": true,
-            "description": "The price of the car.",
-            "default": null
-        },
-        {
             "name": "specs",
             "type" : "object",
             "properties": [

@@ -122,7 +122,20 @@ class CustomerAddressModel {
       );
 }
 
-enum CustomerAddressResidencyTypeEnum { villa, apartment, condo, townhouse }
+/// The residency type of the customer.
+enum CustomerAddressResidencyTypeEnum {
+  /// villa
+  villa,
+
+  /// apartment
+  apartment,
+
+  /// condo
+  condo,
+
+  /// townhouse
+  townhouse,
+}
 
 /// null
 class CustomerHobbyModel {

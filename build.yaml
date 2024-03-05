@@ -3,6 +3,8 @@ targets:
     sources:
       - json/**
       - lib/$lib$
+      - $pacakage$
+
 builders:
   mirror_builder:
     import: "./model_builder.dart"

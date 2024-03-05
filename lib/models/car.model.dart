@@ -6,7 +6,6 @@ class CarModel {
     required this.model,
     required this.year,
     required this.price,
-    required this.quarter,
     required this.specs,
   });
 
@@ -23,9 +22,6 @@ class CarModel {
   final CarPriceModel price;
 
   /// The price of the car.
-  final CarQuarterEnum quarter;
-
-  /// The price of the car.
   final CarSpecsModel specs;
 
   /// Maps the class from a map of [String, dynamic].
@@ -34,7 +30,6 @@ class CarModel {
         model: json['model'] as String,
         year: json['year'] as int,
         price: json['price'] as CarPriceModel,
-        quarter: json['quarter'] as CarQuarterEnum,
         specs: json['specs'] as CarSpecsModel,
       );
 
@@ -44,7 +39,6 @@ class CarModel {
         'model': model,
         'year': year,
         'price': price,
-        'quarter': quarter,
         'specs': specs,
       };
 
@@ -54,7 +48,6 @@ class CarModel {
     String? model,
     int? year,
     CarPriceModel? price,
-    CarQuarterEnum? quarter,
     CarSpecsModel? specs,
   }) =>
       CarModel(
@@ -62,7 +55,6 @@ class CarModel {
         model: model ?? this.model,
         year: year ?? this.year,
         price: price ?? this.price,
-        quarter: quarter ?? this.quarter,
         specs: specs ?? this.specs,
       );
 }
@@ -103,8 +95,6 @@ class CarPriceModel {
         currency: currency ?? this.currency,
       );
 }
-
-enum CarQuarterEnum { first, second, third, fourth }
 
 /// The price of the car.
 class CarSpecsModel {
