@@ -1,0 +1,21 @@
+targets:
+  $default:
+    sources:
+      - json/**
+      - lib/$lib$
+builders:
+  mirror_builder:
+    import: "./model_builder.dart"
+    builder_factories: ["modelBuilder"]
+    build_extensions: { "^json/{{}}.json": ["lib/models/{{}}.model.dart"] }
+    auto_apply: root_package
+    build_to: source
+    runs_before:
+      - dart_model_generator:export_builder
+
+  export_builder:
+    import: "./export_builder.dart"
+    builder_factories: ["exportBuilder"]
+    build_extensions: { "lib": ["models/models.dart"] }
+    auto_apply: root_package
+    build_to: source

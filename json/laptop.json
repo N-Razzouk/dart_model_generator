@@ -1,0 +1,76 @@
+{
+    "name": "laptop",
+    "description": "The laptop schema defines the structure of a laptop.",
+    "properties": [
+        {
+            "name": "brand",
+            "type": "string",
+            "required": true,
+            "description": "The brand of the laptop.",
+            "default": null
+        },
+        {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "The model of the laptop.",
+            "default": null
+        },
+        {
+            "name": "processor",
+            "type": "string",
+            "required": true,
+            "description": "The processor of the laptop.",
+            "default": null
+        },
+        {
+            "name": "ram",
+            "type": "integer",
+            "required": true,
+            "description": "The RAM size of the laptop in gigabytes.",
+            "default": null
+        },
+        {
+            "name": "storage",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "capacity",
+                    "type": "integer",
+                    "required": true,
+                    "description": "The storage capacity of the laptop in gigabytes.",
+                    "default": null
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "required": true,
+                    "description": "The type of storage (e.g., SSD, HDD).",
+                    "default": null
+                }
+            ],
+            "required": true,
+            "description": "The storage details of the laptop.",
+            "default": null
+        },
+        {
+            "name": "operating_system",
+            "type": "enum",
+            "required": true,
+            "description": "The operating system of the laptop.",
+            "default": null,
+            "items": [
+                "windows",
+                "macOS",
+                "linux"
+            ]
+        },
+        {
+            "name": "screen_size",
+            "type": "number",
+            "required": true,
+            "description": "The screen size of the laptop in inches.",
+            "default": null
+        }
+    ]
+}

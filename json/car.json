@@ -1,0 +1,150 @@
+{
+    "name": "car",
+    "description": "A car.",
+    "properties": [
+        {
+            "name": "make",
+            "type": "string",
+            "required": true,
+            "description": "The make of the car.",
+            "default": null
+        },
+        {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "The model of the car.",
+            "default": null
+
+        },
+        {
+            "name": "year",
+            "type": "integer",
+            "required": true,
+            "description": "The year the car was made.",
+            "default": null
+        },
+        {
+            "name": "price",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "amount",
+                    "type": "integer",
+                    "required": true,
+                    "description": "The amount of the price.",
+                    "default": null
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "required": true,
+                    "description": "The currency of the price.",
+                    "default": null
+                }
+            ],
+            "required": true,
+            "description": "The price of the car.",
+            "default": null
+        },
+        {
+            "name": "quarter",
+            "type": "enum",
+            "items": [
+                "first",
+                "second",
+                "third",
+                "fourth"
+            ],
+            "required": true,
+            "description": "The price of the car.",
+            "default": null
+        },
+        {
+            "name": "specs",
+            "type" : "object",
+            "properties": [
+                {
+                    "name": "mileage",
+                    "type": "integer",
+                    "required": true,
+                    "description": "The mileage of the car.",
+                    "default": null
+                },
+                {
+                    "name": "color",
+                    "type": "string",
+                    "required": true,
+                    "description": "The color of the car.",
+                    "default": null
+                },
+                {
+                    "name": "transmission",
+                    "type": "string",
+                    "required": true,
+                    "description": "The transmission of the car.",
+                    "default": null
+                },
+                {
+                    "name": "fuel_type",
+                    "type": "string",
+                    "required": true,
+                    "description": "The fuel type of the car.",
+                    "default": null
+                },
+                {
+                    "name": "body_type",
+                    "type": "string",
+                    "required": true,
+                    "description": "The body type of the car.",
+                    "default": null
+                },
+                {
+                    "name": "engine",
+                    "type": "string",
+                    "required": true,
+                    "description": "The engine of the car.",
+                    "default": null
+                },
+                {
+                    "name": "interior_color",
+                    "type": "string",
+                    "required": true,
+                    "description": "The interior color of the car.",
+                    "default": null
+                },
+                {
+                    "name": "doors",
+                    "type": "integer",
+                    "required": true,
+                    "description": "The number of doors of the car.",
+                    "default": null
+                },
+                {
+                    "name": "seats",
+                    "type": "integer",
+                    "required": true,
+                    "description": "The number of seats of the car.",
+                    "default": null
+                },
+                {
+                    "name": "condition",
+                    "type": "string",
+                    "required": true,
+                    "description": "The condition of the car.",
+                    "default": null
+                },
+                {
+                    "name": "condition_description",
+                    "type": "string",
+                    "required": true,
+                    "description": "The condition description of the car.",
+                    "default": null
+                }
+            ],
+            "required": true,
+            "description": "The price of the car.",
+            "default": null
+        }
+    ]
+}

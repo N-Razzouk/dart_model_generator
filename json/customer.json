@@ -1,0 +1,103 @@
+{
+    "name": "customer",
+    "description": "The customer schema defines the structure of a customer.",
+    "properties": [
+        {
+            "name": "first_name",
+            "type": "string",
+            "required": true,
+            "description": "The first name of the customer.",
+            "default": null
+        },
+        {
+            "name": "last_name",
+            "type": "string",
+            "required": true,
+            "description": "The last name of the customer.",
+            "default": null
+        },
+        {
+            "name": "email",
+            "type": "string",
+            "required": true,
+            "description": "The email address of the customer.",
+            "default": null
+        },
+        {
+            "name": "phone_number",
+            "type": "string",
+            "required": true,
+            "description": "The phone number of the customer.",
+            "default": null
+        },
+        {
+            "name": "address",
+            "description": "The address of the customer.",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "street",
+                    "type": "string",
+                    "required": true,
+                    "description": "The street address of the customer.",
+                    "default": null
+                },
+                {
+                    "name": "city",
+                    "type": "string",
+                    "required": true,
+                    "description": "The city of the customer.",
+                    "default": null
+                },
+                {
+                    "name": "zip_code",
+                    "type": "string",
+                    "required": true,
+                    "description": "The ZIP code of the customer.",
+                    "default": null
+                },
+                {
+                    "name": "residency_type",
+                    "type": "enum",
+                    "required": true,
+                    "description": "The residency type of the customer.",
+                    "default": null,
+                    "items": [
+                        "villa",
+                        "apartment",
+                        "condo",
+                        "townhouse"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "hobbies",
+            "type": "array",
+            "required": false,
+            "description": "The hobbies of the customer.",
+            "default": null,
+            "items": {
+                "name": "hobby",
+                "type": "object",
+                "required": false,
+                "properties": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "required": true,
+                        "description": "The name of the hobby.",
+                        "default": null
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "required": false,
+                        "description": "The description of the hobby.",
+                        "default": null
+                    }
+                ]
+            }
+        }
+    ]
+}

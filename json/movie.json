@@ -1,0 +1,53 @@
+{
+    "name": "movie",
+    "description": "The movie schema defines the structure of a movie.",
+    "properties": [
+        {
+            "name": "title",
+            "type": "string",
+            "required": true,
+            "description": "The title of the movie.",
+            "default": null
+        },
+        {
+            "name": "director",
+            "type": "string",
+            "required": true,
+            "description": "The director of the movie.",
+            "default": null
+        },
+        {
+            "name": "release_year",
+            "type": "integer",
+            "required": true,
+            "description": "The year the movie was released.",
+            "default": null
+        },
+        {
+            "name": "genre",
+            "type": "string",
+            "required": true,
+            "description": "The genre of the movie.",
+            "default": null
+        },
+        {
+            "name": "runtime",
+            "type": "integer",
+            "required": true,
+            "description": "The duration of the movie in minutes.",
+            "default": null
+        },
+        {
+            "name": "actors",
+            "type": "array",
+            "required": true,
+            "description": "List of actors in the movie.",
+            "default": null,
+            "items": {
+                "type": "string",
+                "description": "The name of an actor in the movie.",
+                "required": true
+            }
+        }
+    ]
+}

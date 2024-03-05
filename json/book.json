@@ -1,0 +1,41 @@
+{
+    "name": "book",
+    "description": "The book schema defines the structure of a book.",
+    "properties": [
+        {
+            "name": "title",
+            "type": "string",
+            "required": true,
+            "description": "The title of the book.",
+            "default": null
+        },
+        {
+            "name": "author",
+            "type": "string",
+            "required": true,
+            "description": "The author of the book.",
+            "default": null
+        },
+        {
+            "name": "publication_year",
+            "type": "integer",
+            "required": true,
+            "description": "The year the book was published.",
+            "default": null
+        },
+        {
+            "name": "genre",
+            "type": "string",
+            "required": true,
+            "description": "The genre of the book.",
+            "default": null
+        },
+        {
+            "name": "isbn",
+            "type": "string",
+            "required": true,
+            "description": "The ISBN of the book.",
+            "default": null
+        }
+    ]
+}
